@@ -1,0 +1,125 @@
+//
+// breadcrumb.scss
+//
+
+.pageheader {
+  z-index: 1;
+  position: relative;
+  padding-top: 180px;
+  padding-bottom: 180px;
+  background: linear-gradient(-225deg, #1b71fc 0%, #4801ff 48%, #3b86ff 100%);
+  display: block;
+  overflow: hidden;
+  position: relative;
+  text-align: center;
+
+  .banner-img1 {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: -2;
+    display: block;
+
+    @include breakpoint(max-xxl) {
+      top: 0;
+      right: -5%;
+    }
+
+    @include breakpoint(max-xl) {
+      top: 0;
+      right: -15%;
+    }
+
+    @include breakpoint(max-lg) {
+      display: none;
+    }
+  }
+
+  .banner-img2 {
+    position: absolute;
+    top: 32%;
+    right: 14%;
+    z-index: -1;
+
+    @include breakpoint(max-lg) {
+      display: none;
+    }
+  }
+
+  .banner-img3 {
+    position: absolute;
+    bottom: 15%;
+    left: 14%;
+    z-index: 1;
+
+    @include breakpoint(max-xl) {
+      bottom: 15%;
+      left: 8%;
+    }
+
+    @include breakpoint(max-lg) {
+      bottom: 15%;
+      left: 2%;
+    }
+
+    @include breakpoint(max-md) {
+      display: none;
+    }
+  }
+
+  .banner-img4 {
+    position: absolute;
+    top: 10%;
+    left: -6%;
+    z-index: -1;
+
+    @include breakpoint(max-xl) {
+      top: 10%;
+      left: -6%;
+    }
+
+    @include breakpoint(max-lg) {
+      top: 10%;
+      left: -6%;
+    }
+
+    @include breakpoint(max-md) {
+      top: 10%;
+      left: -6%;
+    }
+
+    @include breakpoint(max-sm) {
+      display: none;
+    }
+  }
+
+  &__area {
+    h2 {
+      color: $white-color;
+      letter-spacing: 2px;
+      font-style: italic;
+    }
+
+    ul {
+      li {
+        font-style: italic;
+
+        a {
+          color: #7a91ee;
+          &:hover,
+          &.active {
+            color: $white-color;
+          }
+        }
+      }
+    }
+  }
+}
+
+.breadcrumb-item + .breadcrumb-item::before {
+  color: $white-color;
+}
+
+.breadcrumb-item.active {
+  color: $white-color;
+}

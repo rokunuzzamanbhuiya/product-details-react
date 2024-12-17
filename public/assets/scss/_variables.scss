@@ -1,0 +1,50 @@
+//
+// variables.scss
+//
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+// colors
+$title-color: #364a63;
+$desc-color: #8091a7;
+$primary-color: #6576ff;
+$secondary-color: #816bff;
+$tertiary-color: #ffbb5a;
+$body-color: #ffffff;
+$border-color: #ecf0f3;
+$white-color: #ffffff;
+$black-color: #3b4747;
+$black-color-two: #0f002b;
+$blue-color: #4b97d3;
+$cyan-color: #1fcec9;
+$violet-color: #816bff;
+$shadow-color: #888888;
+$overlay-color: rgb(17, 18, 27, 0.55);
+
+// font-family
+$font-family-base: "roboto", sans-serif;
+
+// font-size
+$fs-base: 1rem !default;
+$fs-large: 1rem; //16px;
+$fs-small: 0.875rem; //14px
+$fs-h1: 3.75rem; //60px;
+$fs-h2: 2.5rem; //40px;
+$fs-h3: 2.25rem; //36px;
+$fs-h4: 1.875rem; //30px;
+$fs-h5: 1.5rem; //24px;
+$fs-h6: 1.25rem; //20px;
+
+// heading line height
+$lh-h1: 90px;
+$lh-h2: 60px;
+$lh-h3: 54px;
+$lh-h4: 45px;
+$lh-h5: 36px;
+$lh-h6: 30px;
+
+// description line height
+$lh-p: 24px;
+
+//  transition
+$transition: all 0.3s;
