@@ -1,3 +1,27 @@
 //
 // animation.scss
 //
+
+@keyframes downup {
+  0% {
+    -webkit-transform: translateY(-12px);
+    transform: translateY(-12px);
+  }
+
+  100% {
+    -webkit-transform: translateY(12px);
+    transform: translateY(12px);
+  }
+}
+
+@-webkit-keyframes downup {
+  0% {
+    -webkit-transform: translateY(-12px);
+    transform: translateY(-12px);
+  }
+
+  100% {
+    -webkit-transform: translateY(12px);
+    transform: translateY(12px);
+  }
+}

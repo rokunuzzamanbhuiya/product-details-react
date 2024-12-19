@@ -12,18 +12,20 @@
 
     .product {
       &__thumb {
+        margin-right: 5px;
+        @include breakpoint(max-lg) {
+          margin-right: 0;
+        }
+
         & img {
           width: 100%;
         }
       }
 
       &__content {
-        margin-left: 10px;
+        margin-left: 5px;
         @include breakpoint(max-lg) {
           margin-left: 0;
-        }
-
-        &--name {
         }
 
         &--rating-review {
@@ -134,7 +136,7 @@
               transform: translate(-50%, -50%);
             }
 
-            /* Color Variant specific styles */
+            // Color Variant specific styles
             .color-circle.black {
               background: $black-color;
               color: $black-color;
@@ -279,6 +281,9 @@
             }
           }
         }
+        &--total-price {
+          display: none;
+        }
       }
     }
 
@@ -346,15 +351,92 @@
     }
   }
 
+  // For Cart Modal
   &--modal {
-    // Cart Modal
-    .continue-shop-btn {
-      color: $title-color;
-      font-size: 14px;
+    .modal-content {
+      position: relative;
+      max-width: 650px;
+      border-radius: 20px;
+      padding: 20px;
+    }
+
+    .modal-title {
+      font-size: 22px;
       font-weight: 700;
-      border-radius: 3px;
-      padding: 10px 22px;
+    }
+
+    th {
+      font-size: 14px;
+      color: $desc-color;
+    }
+    tbody {
+      td {
+        padding: 20px 0 10px 0;
+        p.item-name {
+          visibility: visible;
+          opacity: 1;
+        }
+        @include breakpoint(max-lg) {
+          padding: 20px 0 10px 0;
+          margin: 0;
+          p.item-name {
+            display: none !important;
+            visibility: hidden;
+            opacity: 0;
+          }
+        }
+      }
+    }
+
+    tfoot {
+      border-bottom: 1px solid transparent;
+    }
+
+    .continue-shop-btn {
+      user-select: none;
+      background: transparent;
       outline: 1px solid #dbdfea;
+      border: medium none;
+      border-radius: 3px;
+      color: $title-color;
+      cursor: pointer;
+      display: inline-block;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0;
+      line-height: 1;
+      margin-bottom: 0;
+      padding: 12px 24px;
+      text-align: center;
+      touch-action: manipulation;
+      transition: all 0.4s ease-in-out;
+      vertical-align: middle;
+      white-space: nowrap;
+      position: relative;
+      overflow: hidden;
+      z-index: 1;
+
+      &::before {
+        content: "";
+        position: absolute;
+        left: -90px;
+        top: -140%;
+        width: 190%;
+        height: 140%;
+        background: $black-color-two;
+        z-index: -1;
+        border-radius: 10%;
+        transition: all 0.4s ease-in-out;
+      }
+
+      &:hover {
+        background: transparent;
+        color: $white-color;
+      }
+
+      &:hover::before {
+        top: -10px;
+      }
     }
 
     .modal-checkout-btn {
@@ -365,12 +447,12 @@
       color: $white-color;
       cursor: pointer;
       display: inline-block;
-      font-size: 14px;
+      font-size: 13px;
       font-weight: 700;
       letter-spacing: 0;
       line-height: 1;
       margin-bottom: 0;
-      padding: 10px 22px;
+      padding: 12px 24px;
       text-align: center;
       touch-action: manipulation;
       transition: all 0.4s ease-in-out;
@@ -379,6 +461,27 @@
       position: relative;
       overflow: hidden;
       z-index: 1;
+
+      &::before {
+        content: "";
+        position: absolute;
+        left: -90px;
+        top: -140%;
+        width: 190%;
+        height: 140%;
+        background: $black-color-two;
+        z-index: -1;
+        border-radius: 10%;
+        transition: all 0.4s ease-in-out;
+      }
+
+      &:hover {
+        background: transparent;
+      }
+
+      &:hover::before {
+        top: -10px;
+      }
     }
   }
 

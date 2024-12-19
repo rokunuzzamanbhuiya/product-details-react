@@ -5,6 +5,26 @@
    File Description: Main CSS file of the template
 */
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+@keyframes downup {
+  0% {
+    -webkit-transform: translateY(-12px);
+    transform: translateY(-12px);
+  }
+  100% {
+    -webkit-transform: translateY(12px);
+    transform: translateY(12px);
+  }
+}
+@-webkit-keyframes downup {
+  0% {
+    -webkit-transform: translateY(-12px);
+    transform: translateY(-12px);
+  }
+  100% {
+    -webkit-transform: translateY(12px);
+    transform: translateY(12px);
+  }
+}
 body {
   font-family: "roboto", sans-serif;
   overflow-x: hidden;
@@ -101,6 +121,8 @@ p {
   top: 32%;
   right: 14%;
   z-index: -1;
+  animation: downup 5s infinite ease-in-out alternate;
+  -webkit-animation: downup 5s infinite ease-in-out alternate;
 }
 @media (max-width: 991.98px) {
   .pageheader .banner-img2 {
@@ -112,6 +134,8 @@ p {
   bottom: 15%;
   left: 14%;
   z-index: 1;
+  animation: downup 3s infinite ease-in-out alternate;
+  -webkit-animation: downup 3s infinite ease-in-out alternate;
 }
 @media (max-width: 1199.98px) {
   .pageheader .banner-img3 {
@@ -132,9 +156,11 @@ p {
 }
 .pageheader .banner-img4 {
   position: absolute;
-  top: 10%;
+  top: -8%;
   left: -6%;
   z-index: -1;
+  animation: downup 8s infinite ease-in-out alternate;
+  -webkit-animation: downup 8s infinite ease-in-out alternate;
 }
 @media (max-width: 1199.98px) {
   .pageheader .banner-img4 {
@@ -188,11 +214,19 @@ p {
   padding-bottom: 20px;
   z-index: 1;
 }
+.product--one .product__thumb {
+  margin-right: 5px;
+}
+@media (max-width: 991.98px) {
+  .product--one .product__thumb {
+    margin-right: 0;
+  }
+}
 .product--one .product__thumb img {
   width: 100%;
 }
 .product--one .product__content {
-  margin-left: 10px;
+  margin-left: 5px;
 }
 @media (max-width: 991.98px) {
   .product--one .product__content {
@@ -265,9 +299,6 @@ p {
   margin-bottom: 6px;
   font-size: 18px;
   font-weight: 700;
-}
-.product--one .product__content--band-color .color-varient {
-  /* Color Variant specific styles */
 }
 .product--one .product__content--band-color .color-varient .color-circle {
   width: 16px;
@@ -415,6 +446,9 @@ p {
   font-size: 20px;
   font-weight: 500;
 }
+.product--one .product__content--total-price {
+  display: none;
+}
 .product--one .product-checkout-btn .ts-btn2 {
   user-select: none;
   background: #ffbb5a none repeat scroll 0 0;
@@ -471,13 +505,83 @@ p {
   margin-left: 10px;
   transition: all 0.4s ease-in-out;
 }
-.product--modal .continue-shop-btn {
-  color: #364a63;
-  font-size: 14px;
+.product--modal .modal-content {
+  position: relative;
+  max-width: 650px;
+  border-radius: 20px;
+  padding: 20px;
+}
+.product--modal .modal-title {
+  font-size: 22px;
   font-weight: 700;
-  border-radius: 3px;
-  padding: 10px 22px;
+}
+.product--modal th {
+  font-size: 14px;
+  color: #8091a7;
+}
+.product--modal tbody td {
+  padding: 20px 0 10px 0;
+}
+.product--modal tbody td p.item-name {
+  visibility: visible;
+  opacity: 1;
+}
+@media (max-width: 991.98px) {
+  .product--modal tbody td {
+    padding: 20px 0 10px 0;
+    margin: 0;
+  }
+  .product--modal tbody td p.item-name {
+    display: none !important;
+    visibility: hidden;
+    opacity: 0;
+  }
+}
+.product--modal tfoot {
+  border-bottom: 1px solid transparent;
+}
+.product--modal .continue-shop-btn {
+  user-select: none;
+  background: transparent;
   outline: 1px solid #dbdfea;
+  border: medium none;
+  border-radius: 3px;
+  color: #364a63;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0;
+  line-height: 1;
+  margin-bottom: 0;
+  padding: 12px 24px;
+  text-align: center;
+  touch-action: manipulation;
+  transition: all 0.4s ease-in-out;
+  vertical-align: middle;
+  white-space: nowrap;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+.product--modal .continue-shop-btn::before {
+  content: "";
+  position: absolute;
+  left: -90px;
+  top: -140%;
+  width: 190%;
+  height: 140%;
+  background: #0f002b;
+  z-index: -1;
+  border-radius: 10%;
+  transition: all 0.4s ease-in-out;
+}
+.product--modal .continue-shop-btn:hover {
+  background: transparent;
+  color: #ffffff;
+}
+.product--modal .continue-shop-btn:hover::before {
+  top: -10px;
 }
 .product--modal .modal-checkout-btn {
   user-select: none;
@@ -487,12 +591,12 @@ p {
   color: #ffffff;
   cursor: pointer;
   display: inline-block;
-  font-size: 14px;
+  font-size: 13px;
   font-weight: 700;
   letter-spacing: 0;
   line-height: 1;
   margin-bottom: 0;
-  padding: 10px 22px;
+  padding: 12px 24px;
   text-align: center;
   touch-action: manipulation;
   transition: all 0.4s ease-in-out;
@@ -501,6 +605,24 @@ p {
   position: relative;
   overflow: hidden;
   z-index: 1;
+}
+.product--modal .modal-checkout-btn::before {
+  content: "";
+  position: absolute;
+  left: -90px;
+  top: -140%;
+  width: 190%;
+  height: 140%;
+  background: #0f002b;
+  z-index: -1;
+  border-radius: 10%;
+  transition: all 0.4s ease-in-out;
+}
+.product--modal .modal-checkout-btn:hover {
+  background: transparent;
+}
+.product--modal .modal-checkout-btn:hover::before {
+  top: -10px;
 }
 .product--index {
   position: relative;

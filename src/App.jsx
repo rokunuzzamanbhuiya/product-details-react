@@ -1,6 +1,5 @@
 // import { useState } from 'react'
-// import reactLogo from './assets/react.svg'
-// import viteLogo from '/vite.svg'
+
 import "./App.css";
 
 function App() {
@@ -60,16 +59,16 @@ function App() {
                       <div className="product__inner">
                         <div className="product__thumb">
                           <div className="product-overlay" />
-                          <a href="product-details.html" target="_blank">
+                          <a href="/product-details" target="_blank">
                             <img
                               src="assets/img/product/big-violet.png"
                               alt="Product"
                             />
                           </a>
-                          <a href="product-details.html" target="_blank">
+                          <a href="/product-details" target="_blank">
                             <i className="fas fa-eye" />
                           </a>
-                          <a href="product-details.html" target="_blank">
+                          <a href="/product-details" target="_blank">
                             <h5>Smart Watch One</h5>
                           </a>
                         </div>
@@ -81,16 +80,16 @@ function App() {
                       <div className="product__inner">
                         <div className="product__thumb">
                           <div className="product-overlay" />
-                          <a href="product-details.html" target="_blank">
+                          <a href="/product-details" target="_blank">
                             <img
                               src="assets/img/product/big-black.png"
                               alt="Product"
                             />
                           </a>
-                          <a href="product-details.html" target="_blank">
+                          <a href="/product-details" target="_blank">
                             <i className="fas fa-eye" />
                           </a>
-                          <a href="product-details.html" target="_blank">
+                          <a href="/product-details" target="_blank">
                             <h5>Smart Watch Two</h5>
                           </a>
                         </div>
@@ -102,16 +101,16 @@ function App() {
                       <div className="product__inner">
                         <div className="product__thumb">
                           <div className="product-overlay" />
-                          <a href="product-details.html" target="_blank">
+                          <a href="/product-details" target="_blank">
                             <img
                               src="assets/img/product/big-cyan.png"
                               alt="Product"
                             />
                           </a>
-                          <a href="product-details.html" target="_blank">
+                          <a href="/product-details" target="_blank">
                             <i className="fas fa-eye" />
                           </a>
-                          <a href="product-details.html" target="_blank">
+                          <a href="/product-details" target="_blank">
                             <h5>Smart Watch Three</h5>
                           </a>
                         </div>
@@ -123,16 +122,16 @@ function App() {
                       <div className="product__inner">
                         <div className="product__thumb">
                           <div className="product-overlay" />
-                          <a href="product-details.html" target="_blank">
+                          <a href="/product-details" target="_blank">
                             <img
                               src="assets/img/product/big-blue.png"
                               alt="Product"
                             />
                           </a>
-                          <a href="product-details.html" target="_blank">
+                          <a href="/product-details" target="_blank">
                             <i className="fas fa-eye" />
                           </a>
-                          <a href="product-details.html" target="_blank">
+                          <a href="/product-details" target="_blank">
                             <h5>Smart Watch Four</h5>
                           </a>
                         </div>
