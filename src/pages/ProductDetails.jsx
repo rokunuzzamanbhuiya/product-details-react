@@ -213,7 +213,7 @@ const ProductDetailsCard = () => {
                 <div className="product-checkout-btn text-center">
                   <button
                     id="btn-checkout"
-                    className="ts-btn2 btn-checkout"
+                    className="ts-btn2 btn-checkout hidden"
                     data-bs-toggle="modal"
                     data-bs-target="#cartModal"
                   >

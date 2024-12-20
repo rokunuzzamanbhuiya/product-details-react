@@ -159,5 +159,15 @@
     .querySelector(".add-to-cart-btn")
     .addEventListener("click", addToCart);
 
+  // Checkout Button Show
+  const addToCartButton = document.getElementById("cart-button");
+  const checkoutButton = document.getElementById("btn-checkout");
+  addToCartButton.addEventListener("click", () => {
+    if (quantity > 0) {
+      return;
+    }
+    checkoutButton.classList.remove("hidden");
+  });
+
   // At The End
 })();

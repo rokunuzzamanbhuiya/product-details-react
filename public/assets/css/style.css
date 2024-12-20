@@ -505,11 +505,15 @@ p {
   margin-left: 10px;
   transition: all 0.4s ease-in-out;
 }
+.product--one .product-checkout-btn .hidden {
+  display: none;
+}
 .product--modal .modal-content {
   position: relative;
   max-width: 650px;
   border-radius: 20px;
   padding: 20px;
+  margin: auto;
 }
 .product--modal .modal-title {
   font-size: 22px;
