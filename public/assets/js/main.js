@@ -2,9 +2,9 @@
   ("use strict");
 
   /*
-  Template Name: Product Details Page HTML Template
+  Template Name: Product Details Page React Template
   Author: Rokunuzzaman Bhuiya
-  Description: Product Details Page HTML Template
+  Description: Product Details Page React Template
   File Description: Main JS file of the template
   */
 
