@@ -151,7 +151,7 @@ function App() {
               <div className="col-xl-12">
                 <div className="text-center">
                   <h6 className="m-0 p-0">
-                    © 2024 Themes Studio. All Rights Reserved.
+                    © 2024 Rokunuzzaman Bhuiya. All Rights Reserved.
                   </h6>
                 </div>
               </div>

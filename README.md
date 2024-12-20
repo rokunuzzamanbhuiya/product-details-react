@@ -16,9 +16,9 @@ A Modern and Responsive Product Detials Page React Template. This Website was bu
 - React
 - Bootstrap
 - Sass
+- Font Awesome Icons
 - CSS Animation
 - Hover Effect
-- W3C Validate Code
 - Clean & Commented Code
 
 ## Getting Started
